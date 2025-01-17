@@ -1,95 +1,42 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+"use client";
 
-export default function Home() {
+import Aviso from "@/components/aviso";
+import Etapas from "@/components/Etapas";
+import Item1 from "@/components/item1";
+import Item2 from "@/components/item2";
+import Sidebar from "@/components/sidebar";
+import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import '../components/App.css';
+import SidebarAviso from "@/components/sidebarAviso";
+
+export default function App() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    <BrowserRouter>
+      <div className="main">
+        <Sidebar />
+        <Etapas />
+        {/* Rotas da sidebar */}
+        <Routes>
+          <Route path="/menu1" element={<SidebarAviso />} />
+          <Route path="/menu2" element={<Item1 />} />
+          <Route path="/menu3" element={<SidebarAviso />} />
+          <Route path="/menu4" element={<SidebarAviso />} />
+          <Route path="/menu5" element={<SidebarAviso />} />
+          <Route path="/menu6" element={<SidebarAviso />} />
+          
+          {/*Rotas para o menu itens */}
+          <Route path="/passo1" element={<Item1 />} />
+          <Route path="/passo2" element={<Item2 />} />
+          <Route path="/passo3" element={<Aviso />} />
+          <Route path="/passo4" element={<Aviso />} />
+          <Route path="/passo5" element={<Aviso />} />
+          <Route path="/passo6" element={<Aviso />} />
+          <Route path="/passo7" element={<Aviso />} />
+          <Route path="/passo8" element={<Aviso />} />
+          <Route path="/passo9" element={<Aviso />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
