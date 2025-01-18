@@ -1,3 +1,6 @@
+import CardFuncionario from "./cardFuncionario";
+
+
 const Item1 = () => {
     return (
         <div className="principal-form">
@@ -22,9 +25,23 @@ const Item1 = () => {
               </div>
            <div className="card-formulario">
                          <div className="titulo">Funcionário(s)</div>
-                            <div className="formulario">
+                            <button className="add-funcionario">
+                                + Adicionar Funcionário
+                            </button>
+                            <div className="buttons">
+                                <button className="btn1">
+                                Ver apenas os ativos
+                                </button>
 
+                                <button className="btn2">
+                                Limpar filtros
+                                </button>
+
+                                <div className="ativos">Ativos 2/3</div>{/*Implementar lógica de quantidade de usuários ativos*/}
                             </div>
+
+                    <CardFuncionario/>
+
             </div>
         </div>
     );

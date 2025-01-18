@@ -37,9 +37,10 @@ export default function App() {
           <Route path="/passo9" element={<Aviso />} />
         </Routes>
 
-        <div>
+        {/* <div>
             <img src={"/assets/elementos.png"} className="Image"/>
-        </div>
+        </div> */}
+
       </div>
     </BrowserRouter>
   );
