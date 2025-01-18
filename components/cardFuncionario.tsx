@@ -28,22 +28,22 @@ return (
     
     <div key={usuario.id} className="card-funcionario">
     <div className="info">
-        <p className="user-name p-margin">Nome: {usuario.nome}</p>
+        
+        <p className="user-name">{usuario.nome}</p>
         <div className="user-details">
-            <p className="user-cpf p-margin">CPF: {usuario.cpf}</p>
-            <p className="user-status p-margin">Status: {usuario.status === 'Ativo' ? 'Ativo' : 'Inativo'} </p>
-            <p className="user-cargo p-margin">Cargo: {usuario.cargo}</p>
+            <p className="user-cpf">{usuario.cpf}</p>
+            <p className="user-status">{usuario.status === 'Ativo' ? 'Ativo' : 'Inativo'} </p>
+            <p className="user-cargo">{usuario.cargo}</p>
         </div>
-    </div>
-    <div className="barra-direita">
+        <div className="barra">
         <Popover content={popoverContent(usuario.id)} trigger="click">
-            <div className="elemento-barra">
-                <div className="elemento-barra">
+            <div className="tres-pontos">
                     ...
-                </div>
             </div>
         </Popover>
     </div>
+    </div>
+    
 </div>
  );
 };

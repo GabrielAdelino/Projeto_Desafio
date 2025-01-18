@@ -1,7 +1,13 @@
+import { Form, Switch } from "antd";
 import CardFuncionario from "./cardFuncionario";
+import { useState } from "react";
 
 
 const Item1 = () => {
+    const [isButtonDisabled, setIsButtonDisabled] = useState(true);
+    const handleSwitchChange = (checked: boolean) => {
+        setIsButtonDisabled(!checked);
+    };
     return (
         <div className="principal-form">
         <div className="card">
@@ -39,9 +45,32 @@ const Item1 = () => {
 
                                 <div className="ativos">Ativos 2/3</div>{/*Implementar lógica de quantidade de usuários ativos*/}
                             </div>
-
+                    <div className="exib-card">
                     <CardFuncionario/>
+                    <CardFuncionario/>
+                    <CardFuncionario/>
+                    <CardFuncionario/>
+                    </div>
+                    <div className="switch-check">
+                       <p>A etapa está concluída?</p>
 
+                       <Form
+                                name="switch"
+                                initialValues={{ativo: false}}
+                            >
+                                <Form.Item
+                                    name="ativo"
+                                    valuePropName="checked"
+                                >
+                                    <Switch
+                                        defaultChecked={false}
+                                        onChange={handleSwitchChange}
+                                        checkedChildren="Sim"
+                                        unCheckedChildren="Não"
+                                    />
+                                </Form.Item>
+                            </Form>
+                    </div>
             </div>
         </div>
     );

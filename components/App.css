@@ -226,7 +226,7 @@
 /*Formulário*/
 
 .card-formulario {
-  margin-left: 780px;
+  margin-left: 770px;
   margin-right: 20px;
   margin-top: 190px;
   background-color: #fff;
@@ -235,7 +235,8 @@
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   /*display: inline-block;*/
   z-index: 5;
-  width: 50%;
+  width: 40%;
+  margin-bottom: 50px;
    height: 754px;
 }
 
@@ -307,27 +308,25 @@ display: flex;
   font-size: 14px;
   margin-top: 10px;
   margin-right: 20px;
-  margin-left: 430px;
+  margin-left: auto;
 }
 
 /*Funcionário*/
 
 .card-funcionario{
-  width: 550px;
-  height: 92px;
+  width: 714px;
+  height: 95px;
+  margin-right: 20px;
   padding: 10px, 40px;
   margin: 24px;
   border-radius: 10px;
   background-color: #e4ecf4;
-  position: absolute;
-}
-
-.user-name p-margin{
-  color: blue;
+  position: relative;
 }
 
 .info {
-  padding: 5px;
+  
+ 
 }
 
 .user-details{
@@ -336,4 +335,53 @@ display: flex;
 
 .user-name {
   font-size: 24px;
+  margin-left: 20px;
+  margin-top: 10px;
+  color: #707070;
+}
+
+.user-cpf, .user-status, .user-cargo {
+  border-radius: 10px;
+  margin: 20px;
+  background-color: #649FBF;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 130px;
+  height: 24px;
+}
+
+.barra{
+display: flex;
+position: absolute;
+align-items: center;
+justify-content: center;
+background-color: #649FBF;
+top: 0;
+right: 0;
+height: 95px;
+width: 48px;
+margin-bottom: 100px;
+border-radius: 0px 10px 10px 0px;
+}
+
+.tres-pontos {
+color: #fff;
+font-size: 30px;
+margin-bottom: 10px;
+}
+
+.exib-cards {
+  display: flex; /* Garante o empilhamento dos componentes */
+  flex-direction: column;
+  gap: 10px;
+}
+
+.swit-check{
+  display: flex;
+    justify-content: end;
+    flex-direction: row;
+    margin-top: 10px;
+    align-self: flex-end;
 }
