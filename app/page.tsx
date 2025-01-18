@@ -24,7 +24,7 @@ export default function App() {
           <Route path="/menu4" element={<SidebarAviso />} />
           <Route path="/menu5" element={<SidebarAviso />} />
           <Route path="/menu6" element={<SidebarAviso />} />
-          
+
           {/*Rotas para o menu itens */}
           <Route path="/passo1" element={<Item1 />} />
           <Route path="/passo2" element={<Item2 />} />
@@ -36,6 +36,10 @@ export default function App() {
           <Route path="/passo8" element={<Aviso />} />
           <Route path="/passo9" element={<Aviso />} />
         </Routes>
+
+        <div>
+            <img src={"/assets/elementos.png"} className="Image"/>
+        </div>
       </div>
     </BrowserRouter>
   );
