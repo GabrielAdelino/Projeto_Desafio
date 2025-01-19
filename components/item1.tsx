@@ -16,6 +16,7 @@ const Item1 = () => {
         setShowCard2(!showCard2);
     }
     return (
+        <div className="outside-form">
         <div className="principal-form">
         <div className="card">
             <div>
@@ -83,12 +84,13 @@ const Item1 = () => {
                     </div>
             </div>
             )}
-            <div className="prox-passo">
+        </div>
+        <div className="prox-passo">
                         <button className="proximo-btn" onClick={handleNestStep}>
                             Próximo passo
                         </button>
                     </div>
-        </div>
+    </div>
     );
 };
 

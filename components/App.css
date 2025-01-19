@@ -238,7 +238,7 @@
   z-index: 5;
   width: 40%;
   margin-bottom: 50px;
-   height: 744px;
+  height: 744px;
 }
 .card-formulario2 {
   margin-left: 770px;
@@ -253,7 +253,7 @@
   z-index: 5;
   width: 50%;
   margin-bottom: 50px;
-   height: 744px;
+  height: 80%; /*height: 744px;*/
 }
 
 .titulo{ /*IMPORTANTE fazer a media query do titulo*/
@@ -271,6 +271,7 @@
 
 .principal-form {
   display: flex;
+  height: auto;
 }
 
 .add-funcionario{
@@ -403,7 +404,7 @@ margin-bottom: 10px;
   width: 30%;
   height: 32px;
   margin-left: 1335px;
-  margin-top: 945px;
+  
   display: inline-block;
   position: absolute;
 }
@@ -432,6 +433,7 @@ margin-bottom: 10px;
 
 .p-funcionario{
   display: flex-start;
+  font-weight: bold;
   margin-left: 20px;
   justify-content: baseline;
 }
@@ -462,6 +464,13 @@ margin-bottom: 10px;
   border-radius: 10px;
   border: 1px solid var(--Default, #649FBF);
 }
+.input-form2{
+  width: 240px;
+  height: 35px;
+  margin-top: 5px;
+  border-radius: 10px;
+  border: 1px solid var(--Default, #649FBF);
+}
 
 .teste{
   flex-direction: column;
@@ -470,6 +479,11 @@ margin-bottom: 10px;
 }
 
 .p-info{
+  font-size: 16px;
+  font-weight: bold;
+}
+.p-info2{
+  margin-top: 8px;
   font-size: 16px;
   font-weight: bold;
 }
@@ -490,12 +504,17 @@ margin-bottom: 10px;
   margin-top: 5px;
   border-radius: 10px;
   margin: 20px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   border: 1px solid var(--Default, #649FBF);
 }
 
 .epi2{
   display: flex;
-  margin: 10px;
+  margin-top: 10px;
+}
+
+.epi2, p{
+  margin-left: 5px;
 }
 
 .card-atividade{
@@ -507,6 +526,9 @@ margin-bottom: 10px;
 
 .epi-ca {
   display: flex;
+  margin-top: 10px;
+  margin-right: 10px;
+  gap: 20px
 }
 
 .epi-select{
@@ -514,12 +536,61 @@ margin-bottom: 10px;
 }
 
 .title-epi{
-  padding: 10px;
+  padding-left: 10px;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 5px;
 }
 
 .atv-drop{
 }
 
-.teste123{
+.select-ativ{
   margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.ant-checkbox-input{
+  margin-right: 5px;
+}
+
+.btn-epi{
+  height: 36px;
+  width: 180px;
+  border-radius: 10px;
+  margin-left: 30px;
+  border: 1px solid var(--Default, #649FBF);
+  color: #649FBF;
+  background-color: transparent;
+}
+.btn-add-atv{
+  width: 97%;
+  height: 50px;
+  margin: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--Default, #649FBF);
+  color: #649FBF;
+  background-color: transparent;
+}
+
+.add-document {
+margin: 20px;
+border-radius: 10px; 
+background-color: transparent;
+border: 1px solid var(--Default, #649FBF);
+}
+
+.document-sections {
+  margin: 10px;
+}
+
+.btn-salvar {
+  width: 95%;
+  height: 36px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px; 
+  background-color: transparent;
+  color: #649FBF;
+  border: 1px solid var(--Default, #649FBF);
 }
