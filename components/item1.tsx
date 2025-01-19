@@ -84,7 +84,7 @@ const Item1 = () => {
             </div>
             )}
             <div className="prox-passo">
-                        <button className="proximo-btn" onClick={handleNestStep}> {/*Implementar: disabled={isButtonDisabled} onClick={handleAddEmployee} */}
+                        <button className="proximo-btn" onClick={handleNestStep}>
                             Próximo passo
                         </button>
                     </div>

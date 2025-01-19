@@ -27,7 +27,7 @@ export default function App() {
 
           {/*Rotas para o menu itens */}
           <Route path="/passo1" element={<Item1 />} />
-          <Route path="/passo2" element={<Item2 />} />
+          <Route path="/passo2" element={<Aviso/>} />
           <Route path="/passo3" element={<Aviso />} />
           <Route path="/passo4" element={<Aviso />} />
           <Route path="/passo5" element={<Aviso />} />

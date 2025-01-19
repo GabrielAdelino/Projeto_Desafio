@@ -251,7 +251,7 @@
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   /*display: inline-block;*/
   z-index: 5;
-  width: 55%;
+  width: 50%;
   margin-bottom: 50px;
    height: 744px;
 }
@@ -338,11 +338,6 @@ display: flex;
   border-radius: 10px;
   background-color: #e4ecf4;
   position: relative;
-}
-
-.info {
-  
- 
 }
 
 .user-details{
@@ -443,11 +438,12 @@ margin-bottom: 10px;
 
 .div1{
   display: flex;
+  gap: 10px;
 }
-.div2{
+/*.div2{
   display: flex;
-  
-}
+  gap: 10px;
+}*/
 
 .info-funcionario {
   display: flex;
@@ -488,4 +484,42 @@ margin-bottom: 10px;
   margin-left: auto;
   padding-top: 20px;
   padding-right: 20px;
+}
+
+.check-epi{
+  margin-top: 5px;
+  border-radius: 10px;
+  margin: 20px;
+  border: 1px solid var(--Default, #649FBF);
+}
+
+.epi2{
+  display: flex;
+  margin: 10px;
+}
+
+.card-atividade{
+  border: 1px solid var(--Default, #649FBF);
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.epi-ca {
+  display: flex;
+}
+
+.epi-select{
+  flex-direction: column;
+}
+
+.title-epi{
+  padding: 10px;
+}
+
+.atv-drop{
+}
+
+.teste123{
+  margin-bottom: 5px;
 }
