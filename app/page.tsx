@@ -3,7 +3,7 @@
 import Aviso from "@/components/aviso";
 import Etapas from "@/components/Etapas";
 import Item1 from "@/components/item1";
-import Item2 from "@/components/item2";
+import Item2 from "@/components/card2";
 import Sidebar from "@/components/sidebar";
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";

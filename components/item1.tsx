@@ -1,13 +1,20 @@
 import { Form, Switch } from "antd";
 import CardFuncionario from "./cardFuncionario";
 import { useState } from "react";
+import Card2 from "./card2";
 
 
 const Item1 = () => {
     const [isButtonDisabled, setIsButtonDisabled] = useState(true);
+    const [showCard2, setShowCard2] = useState(false);
+    
     const handleSwitchChange = (checked: boolean) => {
         setIsButtonDisabled(!checked);
     };
+
+    const handleNestStep = () => {
+        setShowCard2(!showCard2);
+    }
     return (
         <div className="principal-form">
         <div className="card">
@@ -29,6 +36,9 @@ const Item1 = () => {
                         <img src={"/assets/Vector.png"} alt="Image" style={{ backgroundColor: '#fff'}}/>
                     </div>
               </div>
+              {showCard2 ? (
+                <Card2/>
+              ) : (
            <div className="card-formulario">
                          <div className="titulo">Funcionário(s)</div>
                             <button className="add-funcionario">
@@ -52,7 +62,7 @@ const Item1 = () => {
                     <CardFuncionario/>
                     </div>
                     <div className="switch-check">
-                       <p>A etapa está concluída?</p>
+                       <p className="text">A etapa está concluída?</p>
 
                        <Form
                                 name="switch"
@@ -72,6 +82,12 @@ const Item1 = () => {
                             </Form>
                     </div>
             </div>
+            )}
+            <div className="prox-passo">
+                        <button className="proximo-btn" onClick={handleNestStep}> {/*Implementar: disabled={isButtonDisabled} onClick={handleAddEmployee} */}
+                            Próximo passo
+                        </button>
+                    </div>
         </div>
     );
 };

@@ -231,13 +231,29 @@
   margin-top: 190px;
   background-color: #fff;
   position: relative;
+ /* flex-direction: column;*/
   border-radius: 20px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   /*display: inline-block;*/
   z-index: 5;
   width: 40%;
   margin-bottom: 50px;
-   height: 754px;
+   height: 744px;
+}
+.card-formulario2 {
+  margin-left: 770px;
+  margin-right: 20px;
+  margin-top: 190px;
+  background-color: #fff;
+  position: relative;
+ /* flex-direction: column;*/
+  border-radius: 20px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  /*display: inline-block;*/
+  z-index: 5;
+  width: 55%;
+  margin-bottom: 50px;
+   height: 744px;
 }
 
 .titulo{ /*IMPORTANTE fazer a media query do titulo*/
@@ -264,7 +280,7 @@
   color: #649FBF;
   background-color: transparent;
   font-size: 16px;
-  margin-top: 40px;
+  margin-top: 30px;
   margin-left: 20px;
   border-radius: 10px;
   display: flex;
@@ -378,10 +394,98 @@ margin-bottom: 10px;
   gap: 10px;
 }
 
-.swit-check{
+.switch-check{
   display: flex;
     justify-content: end;
+    justify-content: flex-end;
     flex-direction: row;
-    margin-top: 10px;
+    /*margin-top: 10px;*/
+    margin-right: 20px;
     align-self: flex-end;
+}
+
+.prox-passo{
+  width: 30%;
+  height: 32px;
+  margin-left: 1335px;
+  margin-top: 945px;
+  display: inline-block;
+  position: absolute;
+}
+
+.proximo-btn{
+  background-color: #649FBF;
+  border-radius: 10px;
+  width: 194px;
+  height: 32px;
+}
+
+.funcionario-ativo{
+  width: 95%;
+  height: 44px;
+  border: 1px solid var(--Default, #649FBF);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background-color: transparent;
+  font-size: 16px;
+  margin-top: 30px;
+  margin-left: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.p-funcionario{
+  display: flex-start;
+  margin-left: 20px;
+  justify-content: baseline;
+}
+
+.div1{
+  display: flex;
+}
+.div2{
+  display: flex;
+  
+}
+
+.info-funcionario {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  margin: 20px;
+  height: 275px;
+  border: 1px solid var(--Default, #649FBF);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.input-form {
+  width: 300px;
+  height: 36px;
+  margin-top: 5px;
+  border-radius: 10px;
+  border: 1px solid var(--Default, #649FBF);
+}
+
+.teste{
+  flex-direction: column;
+  margin-top: 25px;
+  margin-left: 12px;
+}
+
+.p-info{
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.select-s{
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.activated{
+  margin-left: auto;
+  padding-top: 20px;
+  padding-right: 20px;
 }
