@@ -37,6 +37,12 @@
     position: absolute; /*Mude para fixed para tornar a sidebar fixa*/
 }
 
+.faixa-branca {
+  background-color: #fff;
+  margin-top: 45px;
+  height: 41px;
+}
+
 .ant-menu {
   color: #4FA1C1;
   background-color: transparent;
@@ -474,10 +480,11 @@ margin-bottom: 10px;
 }
 .input-form2{
   width: 240px;
-  height: 35px;
-  margin-top: 5px;
-  border-radius: 10px;
-  border: 1px solid var(--Default, #649FBF);
+  height: 32px;
+  margin-top: 8px;
+  border-radius: 5px; 
+  border: 1px solid var(--Default, #d9d9d9);
+  
 }
 
 .teste{
@@ -606,4 +613,9 @@ border: 1px solid var(--Default, #649FBF);
 .back-button{
   background-color: transparent;
   padding-right: 10px;
+}
+
+.btn-epi-excl{
+  width: 20px;
+  height: 20px;
 }

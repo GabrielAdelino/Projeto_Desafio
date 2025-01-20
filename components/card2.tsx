@@ -5,6 +5,7 @@ import { useState } from "react";
 const Card2: React.FC = () => {
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
   const [isChecked, setIsChecked] = useState(false);
+  const [epis, setEpis] = useState([{ id: 1 }]); // Estado para armazenar os EPIs
   const { Option } = Select;
 
   const handleSwitchChange = (checked: boolean) => {
@@ -19,8 +20,16 @@ const Card2: React.FC = () => {
     console.log(`Selecionado: ${value}`); // Lógica componente EPI
   };
 
+  const handleAdicionarEpi = () => {
+    setEpis([...epis, { id: epis.length + 1 }]); // Adiciona um novo EPI com ID único
+  };
+
+  const handleExcluirEpi = (id: number) => {
+    setEpis(epis.filter(epi => epi.id !== id)); // Filtra e remove o EPI com o ID fornecido
+  };
+
   const goBack = () => {
-    window.history.back();
+    window.location.href = '/'; {/*Ajuste para arrumar bug de redirecionamento */}
   };
 
   return (
@@ -103,7 +112,7 @@ const Card2: React.FC = () => {
                 <p className="select-ativ">Selecione a atividade</p>
                 <Select
                   defaultValue="Atividade 1"
-                  style={{ width: '100%', borderRadius: "10px" }}
+                  style={{ width: "100%", borderRadius: "10px" }}
                   onChange={handleChange}
                 >
                   <Option value="atividade1">Atividade 1</Option>
@@ -111,28 +120,47 @@ const Card2: React.FC = () => {
                   <Option value="atividade3">Atividade 3</Option>
                 </Select>
               </div>
-              {/* Início outro componente EPI */}
-              <div className="epi-ca">
-                <div className="epi-select">
-                  <p className="p-info2">Selecione o EPI:</p>
-                  <Select
-                    defaultValue="Selecione"
-                    style={{ flex: 1, width: 200, borderRadius: "10px", marginBottom: "0px" }}
-                  >
-                    <Option value="epi1">Calçado de segurança</Option>
-                    <Option value="epi2">Capacete obra</Option>
-                    <Option value="epi3">óculos protetor</Option>
-                  </Select>
-                </div>
 
-                <div className="epi-input">
-                  <p className="p-info">Informe o número do CA:</p>
-                  <input className="input-form2" placeholder=" Seu CA" />
+              {/* Renderização dinâmica dos EPIs */}
+              {epis.map((epi, index) => (
+                <div className="epi-ca" key={epi.id}>
+                  <div className="epi-select">
+                    <p className="p-info2">Selecione o EPI:</p>
+                    <Select
+                      defaultValue="Selecione"
+                      style={{
+                        flex: 1,
+                        width: 200,
+                        borderRadius: "10px",
+                        marginBottom: "0px",
+                      }}
+                    >
+                      <Option value="epi1">Calçado de segurança</Option>
+                      <Option value="epi2">Capacete obra</Option>
+                      <Option value="epi3">Óculos protetor</Option>
+                    </Select>
+                  </div>
 
-                  <button className="btn-epi">Adicionar EPI</button>
+                  <div className="epi-input">
+                    <p className="p-info">Informe o número do CA:</p>
+                    <input className="input-form2" placeholder=" Seu CA" />
+                      {index === 0 ? (
+                        <button className="btn-epi" onClick={handleAdicionarEpi}>
+                        Adicionar EPI
+                       </button>
+                      ) : (
+                        <button className="btn-epi" onClick={() => handleExcluirEpi(epi.id)}>
+                        Excluir EPI
+                      </button>
+                      )}
+                    
+                  </div>
+
+                 
                 </div>
-              </div>
-              {/* Fim componente EPI */}
+              ))}
+
+              
             </div>
             {/* Fim trecho componente */}
 

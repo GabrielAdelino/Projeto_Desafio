@@ -41,6 +41,7 @@ const menuItems = [
 const Sidebar = () => {
   return (
     <aside className="sidebar">
+      <div className="faixa-branca"></div>
       <Menu mode="vertical" items={menuItems} /> {/*Redirecionamento via items e Link*/}
     </aside>
   );
