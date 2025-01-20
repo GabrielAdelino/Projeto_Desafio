@@ -2,19 +2,28 @@ import { Form, Switch } from "antd";
 import CardFuncionario from "./cardFuncionario";
 import { useState } from "react";
 import Card2 from "./card2";
-
+import { useNavigate } from "react-router-dom";
 
 const Item1 = () => {
     const [isButtonDisabled, setIsButtonDisabled] = useState(true);
     const [showCard2, setShowCard2] = useState(false);
+    const navigate = useNavigate();
     
     const handleSwitchChange = (checked: boolean) => {
         setIsButtonDisabled(!checked);
     };
 
     const handleNestStep = () => {
-        setShowCard2(!showCard2);
-    }
+        if (showCard2) {
+            console.log("Redirecionando para /passo2");
+            // Se o Card2 está sendo exibido, redirecione para o próximo passo
+            navigate("/passo2");
+        } else {
+            console.log("Exibindo Card2");
+            // Caso contrário, exibe o Card2
+            setShowCard2(true);
+        }
+    };
     return (
         <div className="outside-form">
         <div className="principal-form">
@@ -42,7 +51,7 @@ const Item1 = () => {
               ) : (
            <div className="card-formulario">
                          <div className="titulo">Funcionário(s)</div>
-                            <button className="add-funcionario">
+                            <button className="add-funcionario" onClick={handleNestStep}>
                                 + Adicionar Funcionário
                             </button>
                             <div className="buttons">
@@ -86,7 +95,10 @@ const Item1 = () => {
             )}
         </div>
         <div className="prox-passo">
-                        <button className="proximo-btn" onClick={handleNestStep}>
+                        <button 
+                        className={`proximo-btn ${isButtonDisabled ? 'disabled' : ''}`}
+                        onClick={handleNestStep}
+                        disabled={isButtonDisabled}>
                             Próximo passo
                         </button>
                     </div>

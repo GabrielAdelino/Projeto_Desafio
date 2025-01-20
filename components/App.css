@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
     font-family: Ubuntu, sans-serif;
   }
 
@@ -411,9 +410,18 @@ margin-bottom: 10px;
 
 .proximo-btn{
   background-color: #649FBF;
+  color: #fff;
   border-radius: 10px;
+  border-color: #649FBF;
   width: 194px;
   height: 32px;
+}
+
+.proximo-btn.disabled {
+  background-color: #71716F;
+  border-color: #71716F; /* Cinza claro */
+  color: #fff;
+  
 }
 
 .funcionario-ativo{
@@ -556,7 +564,7 @@ margin-bottom: 10px;
 
 .btn-epi{
   height: 36px;
-  width: 180px;
+  width: 140px;
   border-radius: 10px;
   margin-left: 30px;
   border: 1px solid var(--Default, #649FBF);
@@ -593,4 +601,9 @@ border: 1px solid var(--Default, #649FBF);
   background-color: transparent;
   color: #649FBF;
   border: 1px solid var(--Default, #649FBF);
+}
+
+.back-button{
+  background-color: transparent;
+  padding-right: 10px;
 }
