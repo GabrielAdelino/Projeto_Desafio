@@ -1,11 +1,14 @@
 import { Form, Switch } from "antd";
 import CardFuncionario from "./cardFuncionario";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Card2 from "./card2";
 import { useNavigate } from "react-router-dom";
+import { Usuario, deletarUser, listarUser } from "../services/api";
 
 const Item1 = () => {
     const [isButtonDisabled, setIsButtonDisabled] = useState(true);
+    const [showOnlyActive, setShowOnlyActive] = useState(true);
+    const [usuario, setUsuarios] = useState<Usuario[]>([]);
     const [showCard2, setShowCard2] = useState(false);
     const navigate = useNavigate();
     
@@ -24,6 +27,22 @@ const Item1 = () => {
             setShowCard2(true);
         }
     };
+
+    useEffect(() => {
+        const fetchUsuarios = async () => {
+          try {
+            const usuariosObtidos = await listarUser();
+            setUsuarios(usuariosObtidos);
+          } catch (error) {
+            console.error("Erro ao buscar usuários:", error);
+          }
+        };
+    
+        fetchUsuarios();
+      }, []);
+
+    const quantidadeUser = usuario.filter(usuario => usuario.ativo);
+    const userFiltrados = showOnlyActive ? usuario.filter(usuario => usuario.ativo) : usuario;
     return (
         <div className="outside-form">
         <div className="principal-form">
@@ -63,16 +82,13 @@ const Item1 = () => {
                                 Limpar filtros
                                 </button>
 
-                                <div className="ativos">Ativos 2/3</div>{/*Implementar lógica de quantidade de usuários ativos*/}
+                                <div className="ativos">Ativos {quantidadeUser.length}/{usuario.length}</div>
                             </div>
                     <div className="exib-card">
                     <CardFuncionario/>
-                    <CardFuncionario/>
-                    <CardFuncionario/>
-                    <CardFuncionario/>
                     </div>
                     <div className="switch-check">
-                       <p className="text">A etapa está concluída?</p>
+                       <p className="text-check">A etapa está concluída?</p>
 
                        <Form
                                 name="switch"

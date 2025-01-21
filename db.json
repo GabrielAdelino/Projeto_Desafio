@@ -1,0 +1,24 @@
+{
+  "usuarios": [
+    {
+      "id": "4567",
+      "ativo": true,
+      "nome": "Gabriel",
+      "genero": "male",
+      "cpf": "00000000061",
+      "dataNascimento": "12122024",
+      "rg": "00000061",
+      "cargo": "Cargo 1"
+    },
+    {
+      "id": "a17b",
+      "ativo": false,
+      "nome": "Eduardo",
+      "genero": "male",
+      "cpf": "00000000051",
+      "dataNascimento": "01012024",
+      "rg": "00000051",
+      "cargo": "Crago 2"
+    }
+  ]
+}

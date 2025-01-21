@@ -250,6 +250,7 @@
   margin-right: 20px;
   margin-top: 190px;
   background-color: #fff;
+  flex-direction: row;
   position: relative;
  /* flex-direction: column;*/
   border-radius: 20px;
@@ -258,14 +259,15 @@
   z-index: 5;
   width: 50%;
   margin-bottom: 50px;
-  height: 80%; /*height: 744px;*/
+  height: 84%; /*height: 744px;*/
+  display: inline-block;
 }
 
 .titulo{ /*IMPORTANTE fazer a media query do titulo*/
     
     width: 100%;
     height: 56px;
-    padding: 24px;
+    padding: 18px;
     border-radius: 20px 20px 0px 0px;
     background-color: #649FBF;
     color: #FFFFFF;
@@ -386,6 +388,7 @@ border-radius: 0px 10px 10px 0px;
 .tres-pontos {
 color: #fff;
 font-size: 30px;
+cursor: pointer;
 margin-bottom: 10px;
 }
 
@@ -397,6 +400,9 @@ margin-bottom: 10px;
 
 .switch-check{
   display: flex;
+  position: absolute;
+  bottom: 0;
+  right: 0;
     justify-content: end;
     justify-content: flex-end;
     flex-direction: row;
@@ -405,9 +411,14 @@ margin-bottom: 10px;
     align-self: flex-end;
 }
 
+.text-check{
+  margin-top: 8px;
+  margin-right: 10px;
+}
+
 .prox-passo{
   width: 30%;
-  height: 32px;
+  height: 50px;
   margin-left: 1335px;
   
   display: inline-block;
@@ -419,6 +430,7 @@ margin-bottom: 10px;
   color: #fff;
   border-radius: 10px;
   border-color: #649FBF;
+  margin-top: 20px;
   width: 194px;
   height: 32px;
 }
@@ -455,6 +467,7 @@ margin-bottom: 10px;
 .div1{
   display: flex;
   gap: 10px;
+  height: 80px;
 }
 /*.div2{
   display: flex;
@@ -471,12 +484,17 @@ margin-bottom: 10px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
+.teste-input{
+  margin-top: 0px;
+  gap: 0;
+}
+
 .input-form {
   width: 300px;
   height: 36px;
   margin-top: 5px;
   border-radius: 10px;
-  border: 1px solid var(--Default, #649FBF);
+  
 }
 .input-form2{
   width: 240px;
@@ -496,6 +514,7 @@ margin-bottom: 10px;
 .p-info{
   font-size: 16px;
   font-weight: bold;
+  margin-top: 0;
 }
 .p-info2{
   margin-top: 8px;
@@ -618,4 +637,61 @@ border: 1px solid var(--Default, #649FBF);
 .btn-epi-excl{
   width: 20px;
   height: 20px;
+}
+
+@media (max-width: 1366px) and (max-height: 768px) {
+  .card-funcionario {
+    width: 550px;
+    height: 95px;
+    /*margin-right: 10px;*/
+     /* Corrigido o formato do padding */
+    margin: 20px;
+    border-radius: 10px;
+    background-color: #e4ecf4;
+    position: relative;
+  }
+
+  .card-formulario {
+    margin-left: 770px;
+    margin-right: 20px;
+    margin-top: 190px;
+    background-color: #fff;
+    position: relative;
+   /* flex-direction: column;*/
+    border-radius: 20px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    /*display: inline-block;*/
+    z-index: 5;
+    width: 45%;
+    margin-bottom: 50px;
+    height: 630px;
+  }
+
+  .prox-passo{
+    width: 30%;
+    height: 50px;
+    margin-left: 1135px;
+    display: inline-block;
+    position: absolute;
+  }
+  
+  .card-formulario2 {
+    margin-left: 670px;
+    margin-right: 20px;
+    margin-top: 190px;
+    background-color: #fff;
+    flex-direction: row;
+    position: relative;
+   /* flex-direction: column;*/
+    border-radius: 20px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    /*display: inline-block;*/
+    z-index: 5;
+    width: 50%;
+    margin-bottom: 50px;
+    height: 84%; /*height: 744px;*/
+    display: inline-block;
+  }
+  
+  
 }
