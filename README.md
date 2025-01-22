@@ -4,7 +4,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 Para instalar dependências
 ```bash
-npm intall 
+npm install 
 ```
 Para rodar o projeto
 ```bash
