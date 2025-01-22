@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { atualizarUser, criarUser, listarUser, Usuario } from "@/services/api";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { atualizarUsuario } from "@/public/store/appIndex";
+import { atualizarUsuario, setUsuarioSelecionado } from "@/public/store/appIndex";
 import { RootState } from "@/public/store/store";
 
 const Card2: React.FC = () => {
@@ -76,6 +76,8 @@ const Card2: React.FC = () => {
   
         // Atualiza o estado global
         dispatch(atualizarUsuario(usuarioAtualizado));
+
+        dispatch(setUsuarioSelecionado(null));
   
         console.log("Usuário atualizado com sucesso:", usuarioAtualizado);
       } else {
@@ -271,11 +273,11 @@ const Card2: React.FC = () => {
                         <div className="epi-input">
                           <p className="p-info">Informe o número do CA:</p>
                           <Form.Item
-                              name="numeroCa"
+                              
                               rules={[{required: true, message: 'Por favor, insira seu CA!'}]}
                             >
-                          <Input placeholder="Seu CA" className="input-form2" />
-                          </Form.Item>
+                          <Input name="numeroCa" placeholder="Seu CA" className="input-form2" />
+                          
                           {epiIndex === 0 ? (
                             <Button className="btn-epi" onClick={handleAdicionarEpi}>
                               Adicionar EPI
@@ -289,6 +291,7 @@ const Card2: React.FC = () => {
                               Excluir EPI
                             </Button>
                           )}
+                          </Form.Item>
                         </div>
                       </div>
                     ))}

@@ -9,7 +9,6 @@
 /*Utilzei medidas como EM para maior responsividade*/
 
  .main {
-    /*position: relative;*/
     background-color: #f4f4f4;
   } 
   
@@ -25,7 +24,7 @@
     bottom: 0;
 }
 
-.sidebar { /*IMPORTANTE, SUBSTITUIR OS VALORES POR em ou rem*/
+.sidebar { 
     height: 90%;
     width: 56px;
     background-color:#649FBF;
@@ -83,10 +82,8 @@
 .sidebar-aviso{
   width: 80%; 
     height: 55px;
-    /*top: 24px;*/
     margin-left: 7em;
     margin-top: 25px;
-    /*transform: translateX(-50%);*/
     border-radius: 20px;
     background-color: #4FA1C1;
     z-index: 1;
@@ -102,10 +99,8 @@
 .aviso {
     width: 80%; 
     height: 55px;
-    /*top: 24px;*/
     margin-left: 7em;
     margin-top: 170px;
-    /*transform: translateX(-50%);*/
     border-radius: 20px;
     background-color: #4FA1C1;
     z-index: 1;
@@ -133,10 +128,9 @@
   margin-top: 10px;
 }
 .icones1 {
-  width: 64px; /*ou 64px*/
+  width: 64px; 
     height: 64px;
     border-radius: 20px;
-    /*border: 2px solid transparent;*/
     display: flex;
     align-items: center;
     justify-content: center;
@@ -153,23 +147,12 @@
   border-top: 4px dashed #649FBF;
   background-color: #fff;
   transform: rotate(0deg);
-  /*margin-bottom: 20px;*/
   margin-left: 210px;
   margin-right: 200px;
-  /*margin-right: 20px;*/
   margin-top: 70px;
   z-index: 1;
   position: absolute;
 }
-
-/*.div-completa {
-  width: 80%;
-  margin-left: 8em;
-  margin-top: 10px;
-  display: flex;
-  background-color: #f4f4f4;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-}*/
 
 .ant-steps-item-title {
   background-color: #fff;
@@ -191,7 +174,7 @@
 }
 
 .ant-steps-item-content {
-  background-color: #fff; /*Teste*/
+  background-color: #fff; 
   display: none;
   margin: 0;
   
@@ -237,10 +220,8 @@
   margin-top: 190px;
   background-color: #fff;
   position: relative;
- /* flex-direction: column;*/
   border-radius: 20px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  /*display: inline-block;*/
   z-index: 5;
   width: 40%;
   margin-bottom: 50px;
@@ -253,18 +234,16 @@
   background-color: #fff;
   flex-direction: row;
   position: relative;
- /* flex-direction: column;*/
   border-radius: 20px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  /*display: inline-block;*/
   z-index: 5;
   width: 50%;
   margin-bottom: 50px;
-  height: 84%; /*height: 744px;*/
+  height: 84%;
   display: inline-block;
 }
 
-.titulo{ /*IMPORTANTE fazer a media query do titulo*/
+.titulo{ 
     
     width: 100%;
     height: 56px;
@@ -273,8 +252,6 @@
     background-color: #649FBF;
     color: #FFFFFF;
     font-size: 28px;
-    /*display: flex;
-    align-items: center;*/
 }
 
 .principal-form {
@@ -404,12 +381,11 @@ margin-bottom: 10px;
   position: absolute;
   bottom: 0;
   right: 0;
-    justify-content: end;
-    justify-content: flex-end;
-    flex-direction: row;
-    /*margin-top: 10px;*/
-    margin-right: 20px;
-    align-self: flex-end;
+  justify-content: end;
+  justify-content: flex-end;
+  flex-direction: row;
+  margin-right: 20px;
+  align-self: flex-end;
 }
 
 .text-check{
@@ -422,8 +398,6 @@ margin-bottom: 10px;
   height: 50px;
   margin-left: 1335px;
   background-color: #f4f4f4;
-  /*display: inline-block;
-  position: absolute;*/
 }
 
 .proximo-btn{
@@ -438,7 +412,7 @@ margin-bottom: 10px;
 
 .proximo-btn.disabled {
   background-color: #71716F;
-  border-color: #71716F; /* Cinza claro */
+  border-color: #71716F;
   color: #fff;
   
 }
@@ -470,10 +444,6 @@ margin-bottom: 10px;
   gap: 10px;
   height: 80px;
 }
-/*.div2{
-  display: flex;
-  gap: 10px;
-}*/
 
 .info-funcionario {
   display: flex;
@@ -577,9 +547,6 @@ margin-bottom: 10px;
   padding-bottom: 5px;
 }
 
-.atv-drop{
-}
-
 .select-ativ{
   margin-bottom: 5px;
   font-weight: bold;
@@ -597,6 +564,7 @@ margin-bottom: 10px;
   border: 1px solid var(--Default, #649FBF);
   color: #649FBF;
   background-color: transparent;
+  position: absolute;
 }
 .btn-add-atv{
   width: 97%;
@@ -644,8 +612,6 @@ border: 1px solid var(--Default, #649FBF);
   .card-funcionario {
     width: 550px;
     height: 95px;
-    /*margin-right: 10px;*/
-     /* Corrigido o formato do padding */
     margin: 20px;
     border-radius: 10px;
     background-color: #e4ecf4;
@@ -658,10 +624,8 @@ border: 1px solid var(--Default, #649FBF);
     margin-top: 190px;
     background-color: #fff;
     position: relative;
-   /* flex-direction: column;*/
     border-radius: 20px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    /*display: inline-block;*/
     z-index: 5;
     width: 45%;
     margin-bottom: 50px;
@@ -672,9 +636,6 @@ border: 1px solid var(--Default, #649FBF);
     width: 30%;
     height: 50px;
     margin-left: 1135px;
-    /*display: inline-block;
-    position: absolute;
-    border-color: #71716F !important;*/
   }
   
   .card-formulario2 {
@@ -684,18 +645,16 @@ border: 1px solid var(--Default, #649FBF);
     background-color: #fff;
     flex-direction: row;
     position: relative;
-   /* flex-direction: column;*/
     border-radius: 20px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    /*display: inline-block;*/
     z-index: 5;
     width: 50%;
     margin-bottom: 50px;
-    height: 84%; /*height: 744px;*/
+    height: 84%;
     display: inline-block;
   }
   
-  .sidebar { /*IMPORTANTE, SUBSTITUIR OS VALORES POR em ou rem*/
+  .sidebar {
     height: 100%;
     width: 56px;
     margin-top: 60px;
@@ -704,7 +663,6 @@ border: 1px solid var(--Default, #649FBF);
     border-bottom-right-radius: 20px;
     left: 0;
     padding: 0;
-     /*Mude para fixed para tornar a sidebar fixa*/
 }
 
 .ant-menu {

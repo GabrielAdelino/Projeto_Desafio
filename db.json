@@ -24,20 +24,7 @@
       "cargo": "Cargo 1",
       "atividade": "atividade3",
       "epi": "epi1",
-      "numeroCa": "777"
-    },
-    {
-      "id": "03ff",
-      "ativo": true,
-      "nome": "Gabriel",
-      "genero": "male",
-      "cpf": "00000000062",
-      "dataNascimento": "12122024",
-      "rg": "00000060",
-      "cargo": "Cargo 1",
-      "atividade": "atividade1",
-      "epi": "epi1",
-      "numeroCa": "555"
+      "numeroCa": "444"
     },
     {
       "id": "41cb",
@@ -52,6 +39,19 @@
       "epi": "epi1",
       "numeroCa": "333",
       "usaEpi": true
+    },
+    {
+      "id": "f646",
+      "ativo": false,
+      "nome": "adasdasd",
+      "genero": "male",
+      "cpf": "adasdas",
+      "dataNascimento": "asdsad",
+      "rg": "dasdsad",
+      "cargo": "asdasdas",
+      "atividade": "atividade1",
+      "epi": "epi1",
+      "numeroCa": "999"
     }
   ]
 }
