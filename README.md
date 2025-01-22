@@ -14,8 +14,8 @@ comando para rodar o json-server, rodar este comando em outro terminal e dentro 
 ```bash
 npx json-server --watch db.json --port 3080
 ```
-[!NOTE]
-Atenção: é informado sobre o import do antd mas isso não impacta no funcionamento.
+> [!NOTE]
+> Atenção: é informado sobre o import do antd mas isso não impacta no funcionamento.
 
 First, run the development server:
 
