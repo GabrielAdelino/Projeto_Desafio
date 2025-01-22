@@ -2,6 +2,25 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
+Para instalar dependências
+```bash
+npm install 
+```
+Para rodar o projeto
+```bash
+npm run dev 
+```
+comando para rodar o json-server, rodar este comando em outro terminal e dentro do diretório do projeto
+```bash
+npx json-server --watch db.json --port 3080
+```
+<br>
+
+> [!NOTE]
+> Atenção: é informado sobre o import do antd mas isso não impacta no funcionamento.
+
+
+<br>
 First, run the development server:
 
 ```bash
