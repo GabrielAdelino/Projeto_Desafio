@@ -19,7 +19,7 @@ const Item1 = () => {
     const handleNestStep = () => {
         if (showCard2) {
             console.log("Redirecionando para /passo2");
-            // Se o Card2 está sendo exibido, redirecione para o próximo passo
+          //Lógica para passar o passo
             navigate("/passo2");
         } else {
             console.log("Exibindo Card2");

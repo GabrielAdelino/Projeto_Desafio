@@ -9,9 +9,14 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import '../components/App.css';
 import SidebarAviso from "@/components/sidebarAviso";
+import CardFuncionario from "@/components/cardFuncionario";
+import Card2 from "@/components/card2";
+import store from "@/public/store/store";
+import { Provider } from "react-redux";
 
 export default function App() {
   return (
+    <Provider store={store}>
     <BrowserRouter>
       <div className="main">
         <Sidebar />
@@ -35,6 +40,9 @@ export default function App() {
           <Route path="/passo7" element={<Aviso />} />
           <Route path="/passo8" element={<Aviso />} />
           <Route path="/passo9" element={<Aviso />} />
+
+          <Route path="/" element={<CardFuncionario />} />
+        <Route path="/editar" element={<Card2 />} />
         </Routes>
 
         {/* <div>
@@ -43,5 +51,6 @@ export default function App() {
 
       </div>
     </BrowserRouter>
+    </Provider>
   );
 }

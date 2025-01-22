@@ -1,7 +1,11 @@
 import { Button, Checkbox, Form, Input, Radio, Select, Switch, Upload } from "antd";
 import { ArrowLeftOutlined, UploadOutlined } from "@ant-design/icons";
 import { useEffect, useState } from "react";
-import { criarUser, listarUser, Usuario } from "@/services/api";
+import { atualizarUser, criarUser, listarUser, Usuario } from "@/services/api";
+import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { atualizarUsuario } from "@/public/store/appIndex";
+import { RootState } from "@/public/store/store";
 
 const Card2: React.FC = () => {
   const [isChecked, setIsChecked] = useState(false);
@@ -10,6 +14,19 @@ const Card2: React.FC = () => {
   const [atividades, setAtividades] = useState([{ id: 1 }]); // Estado para armazenar as atividades
   const { Option } = Select;
   const [form] = Form.useForm();
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const usuarioSelecionado = useSelector((state: RootState) => state.usuarios.usuarioSelecionado);
+
+  useEffect(() => {
+    if (usuarioSelecionado) {
+      form.setFieldsValue(usuarioSelecionado);
+    } else {
+      form.resetFields(); // Reseta os campos para criação de novo usuário
+    }
+  }, [usuarioSelecionado, form]);
+
+  
 
   // Funções de controle do formulário
   const handleCheckboxChange = (e: any) => {
@@ -48,13 +65,36 @@ const Card2: React.FC = () => {
     fetchUsuarios();
   }, []);
 
-  const handleSubmit = async (values: any) => {
+  const handleSubmit1 = async (values: any) => {
     try {
-      const novoUsuario = await criarUser(values);
-      console.log("Usuário criado:", novoUsuario);
+      if (usuarioSelecionado) {
+        // Atualiza o usuário existente
+        const usuarioAtualizado = { ...usuarioSelecionado, ...values };
+  
+        // Atualiza no backend
+        await atualizarUser(usuarioAtualizado.id, usuarioAtualizado); 
+  
+        // Atualiza o estado global
+        dispatch(atualizarUsuario(usuarioAtualizado));
+  
+        console.log("Usuário atualizado com sucesso:", usuarioAtualizado);
+      } else {
+        // Cria um novo usuário
+        const novoUsuario = await criarUser(values);
+  
+        console.log("Usuário criado com sucesso:", novoUsuario);
+      }
+  
+      navigate("/"); // Redireciona para a página inicial
     } catch (error) {
-      console.error("Erro ao criar usuário:", error);
+      console.error("Erro ao salvar usuário:", error);
     }
+  };
+  
+
+  const handleSubmitForm = () => {
+    console.log("Formulário enviado");
+    navigate("/"); // Redireciona para a página inicial
   };
 
   return (
@@ -63,7 +103,7 @@ const Card2: React.FC = () => {
       className="teste-input"
         form={form}
         initialValues={{ ativo: false }}
-        onFinish={handleSubmit}
+        onFinish={handleSubmit1}
       >
         <div className="card-formulario2">
           <div className="titulo">
@@ -252,8 +292,8 @@ const Card2: React.FC = () => {
             </div>
           </div>
           <div>
-            <Button className="btn-salvar" type="primary" htmlType="submit">
-              Salvar
+            <Button onClick={handleSubmitForm} className="btn-salvar" type="primary" htmlType="submit">
+              {usuarioSelecionado ? "Salvar Alterações" : "Salvar"}
             </Button>
           </div>
         </div>

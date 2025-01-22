@@ -20,6 +20,7 @@ export interface Usuario {
 }
 
 export const criarUser = async (usuario: Usuario): Promise<Usuario> => {
+    console.log("Dados enviados:", usuario);
     const resposta = await fetch(URL, {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
@@ -53,7 +54,9 @@ export const atualizarUser = async (id: number, usuarioAtualizado: Usuario): Pro
     if (response.ok) {
         return await response.json();
     } else {
-        throw new Error('Não foi possivel atualizar o usuário');
+        const errorMessage = await response.text();
+    console.error("Erro ao atualizar usuário:", errorMessage);
+    throw new Error('Não foi possível atualizar o usuário');
     }
 };
 
