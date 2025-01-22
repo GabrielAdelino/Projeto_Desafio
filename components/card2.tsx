@@ -271,13 +271,17 @@ const Card2: React.FC = () => {
                           </Form.Item>
                         </div>
                         <div className="epi-input">
+                          <div className="ajuste-input-epi">
                           <p className="p-info">Informe o número do CA:</p>
+                        
+                        
                           <Form.Item
-                              
+                              name="numeroCa"
                               rules={[{required: true, message: 'Por favor, insira seu CA!'}]}
                             >
-                          <Input name="numeroCa" placeholder="Seu CA" className="input-form2" />
-                          
+                          <Input  placeholder="Seu CA" className="input-form2" />
+                          </Form.Item>
+                          </div>
                           {epiIndex === 0 ? (
                             <Button className="btn-epi" onClick={handleAdicionarEpi}>
                               Adicionar EPI
@@ -291,7 +295,7 @@ const Card2: React.FC = () => {
                               Excluir EPI
                             </Button>
                           )}
-                          </Form.Item>
+                          
                         </div>
                       </div>
                     ))}

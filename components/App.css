@@ -473,7 +473,10 @@ margin-bottom: 10px;
   margin-top: 8px;
   border-radius: 5px; 
   border: 1px solid var(--Default, #d9d9d9);
-  
+}
+
+.ajuste-input-epi{
+ flex-direction: column;
 }
 
 .teste{
@@ -536,6 +539,10 @@ margin-bottom: 10px;
   gap: 20px
 }
 
+.epi-input {
+  display: flex;
+}
+
 .epi-select{
   flex-direction: column;
 }
@@ -558,9 +565,10 @@ margin-bottom: 10px;
 
 .btn-epi{
   height: 36px;
-  width: 140px;
+  width: 165px;
   border-radius: 10px;
-  margin-left: 30px;
+  margin-top: 30px;
+  margin-left: 255px;
   border: 1px solid var(--Default, #649FBF);
   color: #649FBF;
   background-color: transparent;
