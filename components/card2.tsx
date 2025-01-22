@@ -211,7 +211,12 @@ const Card2: React.FC = () => {
                 <div className="title-epi">
                   <p style={{ fontWeight: "bold" }}>Quais EPIs o trabalhador usa na atividade?</p>
                   <div className="epi2">
-                    <Checkbox checked={isChecked} onChange={handleCheckboxChange} />
+                    <Form.Item
+                    name="usaEpi"
+                    valuePropName="checked"
+                    >
+                    <Checkbox checked={isChecked} onChange={handleCheckboxChange}  />
+                    </Form.Item>
                     <p>O Trabalhador não usa EPI</p>
                   </div>
                 </div>
@@ -220,22 +225,37 @@ const Card2: React.FC = () => {
                   <div className="card-atividade">
                     <div className="atv-drop">
                       <p className="select-ativ">Selecione a atividade</p>
+                      <Form.Item
+                        name="atividade"
+                        rules={[{
+                            required: true,
+                            message: 'Por favor, selecione sua atividade!'
+                        }]}
+                      >
                       <Select
-                        defaultValue="Atividade 1"
+                        
                         style={{ width: "100%", borderRadius: "10px" }}
                       >
                         <Option value="atividade1">Atividade 1</Option>
                         <Option value="atividade2">Atividade 2</Option>
                         <Option value="atividade3">Atividade 3</Option>
                       </Select>
+                      </Form.Item>
                     </div>
 
                     {epis.map((epi, epiIndex) => (
                       <div className="epi-ca" key={epi.id}>
                         <div className="epi-select">
                           <p className="p-info2">Selecione o EPI:</p>
+                          <Form.Item
+                            name="epi"
+                            rules={[{
+                                required: true,
+                                message: 'Por favor, selecione seu EPI!'
+                            }]}
+                          >
                           <Select
-                            defaultValue="Selecione"
+                            
                             style={{
                               flex: 1,
                               width: 200,
@@ -246,14 +266,21 @@ const Card2: React.FC = () => {
                             <Option value="epi2">Capacete obra</Option>
                             <Option value="epi3">Óculos protetor</Option>
                           </Select>
+                          </Form.Item>
                         </div>
                         <div className="epi-input">
                           <p className="p-info">Informe o número do CA:</p>
+                          <Form.Item
+                              name="numeroCa"
+                              rules={[{required: true, message: 'Por favor, insira seu CA!'}]}
+                            >
                           <Input placeholder="Seu CA" className="input-form2" />
+                          </Form.Item>
                           {epiIndex === 0 ? (
                             <Button className="btn-epi" onClick={handleAdicionarEpi}>
                               Adicionar EPI
                             </Button>
+                            
                           ) : (
                             <Button
                               className="btn-epi"

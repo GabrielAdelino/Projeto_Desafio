@@ -16,6 +16,7 @@ const Item1 = () => {
         setIsButtonDisabled(!checked);
     };
 
+    // Mnatém a lógica de adicionar funcionário no btn add funcionário
     const handleNestStep = () => {
         if (showCard2) {
             console.log("Redirecionando para /passo2");
@@ -25,6 +26,20 @@ const Item1 = () => {
             console.log("Exibindo Card2");
             // Caso contrário, exibe o Card2
             setShowCard2(true);
+        }
+    };
+
+    //Lógica de próximo btn para direcionar para o /passo2
+    const handleNestStep1 = () => {
+        if (showCard2) {
+            console.log("Redirecionando para /passo2");
+          //Lógica para passar o passo
+            navigate("/passo2");
+        } else {
+            console.log("Exibindo Card2");
+            // Caso contrário, exibe o Card2
+            setShowCard2(true);
+            navigate("/passo2");
         }
     };
 
@@ -43,6 +58,7 @@ const Item1 = () => {
 
     const quantidadeUser = usuario.filter(usuario => usuario.ativo);
     const userFiltrados = showOnlyActive ? usuario.filter(usuario => usuario.ativo) : usuario;
+    
     return (
         <div className="outside-form">
         <div className="principal-form">
@@ -113,11 +129,12 @@ const Item1 = () => {
         <div className="prox-passo">
                         <button 
                         className={`proximo-btn ${isButtonDisabled ? 'disabled' : ''}`}
-                        onClick={handleNestStep}
+                        onClick={handleNestStep1}
                         disabled={isButtonDisabled}>
                             Próximo passo
                         </button>
                     </div>
+
     </div>
     );
 };

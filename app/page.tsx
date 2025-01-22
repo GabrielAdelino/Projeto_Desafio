@@ -45,10 +45,9 @@ export default function App() {
         <Route path="/editar" element={<Card2 />} />
         </Routes>
 
-        {/* <div>
-            <img src={"/assets/elementos.png"} className="Image"/>
-        </div> */}
+       
 
+        
       </div>
     </BrowserRouter>
     </Provider>

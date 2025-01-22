@@ -8,7 +8,10 @@
       "cpf": "00000000079",
       "dataNascimento": "03032024",
       "rg": "00000078",
-      "cargo": "Cargo 3"
+      "cargo": "Cargo 3",
+      "atividade": "atividade3",
+      "epi": "epi2",
+      "numeroCa": "222"
     },
     {
       "id": "7c26",
@@ -18,7 +21,10 @@
       "cpf": "00000000060",
       "dataNascimento": "12122024",
       "rg": "00000061",
-      "cargo": "Cargo 1"
+      "cargo": "Cargo 1",
+      "atividade": "atividade3",
+      "epi": "epi1",
+      "numeroCa": "777"
     },
     {
       "id": "03ff",
@@ -28,7 +34,24 @@
       "cpf": "00000000062",
       "dataNascimento": "12122024",
       "rg": "00000060",
-      "cargo": "Cargo 1"
+      "cargo": "Cargo 1",
+      "atividade": "atividade1",
+      "epi": "epi1",
+      "numeroCa": "555"
+    },
+    {
+      "id": "41cb",
+      "ativo": false,
+      "nome": "Carlos",
+      "genero": "male",
+      "cpf": "00000000013",
+      "dataNascimento": "23032024",
+      "rg": "00000013",
+      "cargo": "Cargo 2",
+      "atividade": "atividade1",
+      "epi": "epi1",
+      "numeroCa": "333",
+      "usaEpi": true
     }
   ]
 }

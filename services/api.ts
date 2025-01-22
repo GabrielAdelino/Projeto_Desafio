@@ -11,7 +11,7 @@ export interface Usuario {
     dataNascimento: string;
     rg: string;
     cargo: string;
-    
+
     usaEpi: boolean;
     atividade: string;
     epi: string;

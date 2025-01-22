@@ -12,6 +12,7 @@
     /*position: relative;*/
     background-color: #f4f4f4;
   } 
+  
 .Image{
   width: 30%;
     margin-bottom: 0;
@@ -420,9 +421,9 @@ margin-bottom: 10px;
   width: 30%;
   height: 50px;
   margin-left: 1335px;
-  
-  display: inline-block;
-  position: absolute;
+  background-color: #f4f4f4;
+  /*display: inline-block;
+  position: absolute;*/
 }
 
 .proximo-btn{
@@ -671,8 +672,9 @@ border: 1px solid var(--Default, #649FBF);
     width: 30%;
     height: 50px;
     margin-left: 1135px;
-    display: inline-block;
+    /*display: inline-block;
     position: absolute;
+    border-color: #71716F !important;*/
   }
   
   .card-formulario2 {
@@ -693,5 +695,26 @@ border: 1px solid var(--Default, #649FBF);
     display: inline-block;
   }
   
-  
+  .sidebar { /*IMPORTANTE, SUBSTITUIR OS VALORES POR em ou rem*/
+    height: 100%;
+    width: 56px;
+    margin-top: 60px;
+    background-color:#649FBF;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    left: 0;
+    padding: 0;
+     /*Mude para fixed para tornar a sidebar fixa*/
+}
+
+.ant-menu {
+  color: #4FA1C1;
+  background-color: transparent;
+  height: 60%;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 }

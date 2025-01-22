@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./App.css";
 import { deletarUser, listarUser, Usuario } from "@/services/api";
@@ -6,7 +6,7 @@ import { setUsuarioSelecionado } from "@/public/store/appIndex";
 import { useDispatch } from "react-redux";
 import { Button, Popover } from "antd";
 
-const CardFuncionario = () => {
+const CardFuncionario: React.FC = () => {
   console.log("Componente montado");
   const [usuarios, setUsuarios] = useState<Usuario[]>([]); // Armazena a lista de usuários
   const [loading, setLoading] = useState(false); // Para gerenciar estado de carregamento
@@ -60,7 +60,7 @@ const CardFuncionario = () => {
   );
 
   useEffect(() => {
-    fetchUsuarios();
+    fetchUsuarios(); // Busca os usuários ao montar o componente
   }, []);
 
   return (
@@ -74,11 +74,16 @@ const CardFuncionario = () => {
               <p className="user-name">{usuario.nome}</p>
               <div className="user-details">
                 <p className="user-cpf">{usuario.cpf}</p>
-                <p className="user-status">{usuario.ativo ? "Ativo" : "Inativo"}</p>
-                <p className="user-cargo">{usuario.cargo}</p>
+                <p className="user-status">
+                  Status: {usuario.ativo ? "Ativo" : "Inativo"}
+                </p>
+                <p className="user-cargo">Cargo: {usuario.cargo}</p>
               </div>
               <div className="barra">
-                <Popover content={popoverContent(usuario.id || "")} trigger="click">
+                <Popover
+                  content={popoverContent(usuario.id || "")}
+                  trigger="click"
+                >
                   <div className="tres-pontos">...</div>
                 </Popover>
               </div>
