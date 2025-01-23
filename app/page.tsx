@@ -41,8 +41,9 @@ export default function App() {
           <Route path="/passo8" element={<Aviso />} />
           <Route path="/passo9" element={<Aviso />} />
 
+          {/*Rotas para edição */}
           <Route path="/" element={<CardFuncionario />} />
-        <Route path="/editar" element={<Card2 />} />
+          <Route path="/editar" element={<Card2 />} />
         </Routes>
 
        

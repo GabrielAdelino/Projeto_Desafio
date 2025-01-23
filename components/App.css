@@ -627,7 +627,7 @@ border: 1px solid var(--Default, #649FBF);
   }
 
   .card-formulario {
-    margin-left: 770px;
+    margin-left: 750px;
     margin-right: 20px;
     margin-top: 190px;
     background-color: #fff;
@@ -647,7 +647,7 @@ border: 1px solid var(--Default, #649FBF);
   }
   
   .card-formulario2 {
-    margin-left: 670px;
+    margin-left: 662px;
     margin-right: 20px;
     margin-top: 190px;
     background-color: #fff;
@@ -660,6 +660,18 @@ border: 1px solid var(--Default, #649FBF);
     margin-bottom: 50px;
     height: 84%;
     display: inline-block;
+  }
+
+  .btn-epi{
+    height: 36px;
+    width: 120px;
+    border-radius: 10px;
+    margin-top: 30px;
+    margin-left: 255px;
+    border: 1px solid var(--Default, #649FBF);
+    color: #649FBF;
+    background-color: transparent;
+    position: absolute;
   }
   
   .sidebar {
